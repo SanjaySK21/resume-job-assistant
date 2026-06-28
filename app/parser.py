@@ -471,10 +471,12 @@ def extract_skills_llm(resume_text):
     """
     prompt = f"""You will be given the text of ONE resume below, inside triple quotes.
 
-Your task: list every technical skill, tool, technology, framework, or method
-that is explicitly written in that text. Do not add anything that is not
-literally present in the text. If the resume does not mention something, it
-must not appear in your output.
+Your task: list every technical skill, tool, technology, framework, methodology,
+or technique that is explicitly written in that text — whether it appears as a
+listed keyword or is described within a sentence.
+
+Do not add anything that is not literally present in the text. If the resume
+does not mention something, it must not appear in your output.
 
 Resume text:
 \"\"\"
